@@ -33,4 +33,4 @@ fi
 git add .
 git commit -am "$version"
 git tag "$version"
-#git push origin "$version" --tags
+git push origin "$version" --tags
