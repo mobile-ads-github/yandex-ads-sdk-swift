@@ -1,4 +1,5 @@
 .build
+.DS_Store
 Package.resolved
 YandexMobileAds.xcframework.zip
 YandexMobileAdsInstream.xcframework.zip
