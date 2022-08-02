@@ -31,8 +31,8 @@ rm ./YandexMobileAdsInstream.zip
 zip -r YandexMobileAdsInstream.xcframework.zip "./YandexMobileAdsInstream/$(cat ./YandexMobileAdsInstream.podspec.json | jq -r '.vendored_frameworks')"
 rm -rf ./YandexMobileAdsInstream
 
-YMA_URL="https://github.com/yandexmobile/yandex-ads-sdk-ios/releases/download/$version/YandexMobileAds.xcframework.zip"
-YMA_INSTREAM_URL="https://github.com/yandexmobile/yandex-ads-sdk-ios/releases/download/$version/YandexMobileAdsInstream.xcframework.zip"
+YMA_URL="https://github.com/mobile-ads-github/yandex-ads-sdk-swift/releases/download/$version/YandexMobileAds.xcframework.zip"
+YMA_INSTREAM_URL="https://github.com/mobile-ads-github/yandex-ads-sdk-swift/releases/download/$version/YandexMobileAdsInstream.xcframework.zip"
 YMA_CHECKSUM=$(swift package compute-checksum ./YandexMobileAds.xcframework.zip)
 YMA_INSTREAM_CHECKSUM=$(swift package compute-checksum ./YandexMobileAdsInstream.xcframework.zip)
 
