@@ -21,15 +21,19 @@ curl -O "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/c/5/Ya
 curl $(cat ./YandexMobileAds.podspec.json | jq -r '.source.http') -o YandexMobileAds.zip
 unzip ./YandexMobileAds.zip -d ./YandexMobileAds
 rm ./YandexMobileAds.zip
-zip -r YandexMobileAds.xcframework.zip "./YandexMobileAds/$(cat ./YandexMobileAds.podspec.json | jq -r '.vendored_frameworks')"
+mv "./YandexMobileAds/$(cat ./YandexMobileAds.podspec.json | jq -r '.vendored_frameworks')" YandexMobileAds.xcframework
 rm -rf ./YandexMobileAds
+zip -r YandexMobileAds.xcframework.zip YandexMobileAds.xcframework
+rm -rf ./YandexMobileAds.xcframework
 
 curl -O "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/6/4/e/YandexMobileAdsInstream/$instream_version/YandexMobileAdsInstream.podspec.json"
 curl $(cat ./YandexMobileAdsInstream.podspec.json | jq -r '.source.http') -o YandexMobileAdsInstream.zip
 unzip ./YandexMobileAdsInstream.zip -d ./YandexMobileAdsInstream
 rm ./YandexMobileAdsInstream.zip
-zip -r YandexMobileAdsInstream.xcframework.zip "./YandexMobileAdsInstream/$(cat ./YandexMobileAdsInstream.podspec.json | jq -r '.vendored_frameworks')"
+mv "./YandexMobileAdsInstream/$(cat ./YandexMobileAdsInstream.podspec.json | jq -r '.vendored_frameworks')" YandexMobileAdsInstream.xcframework
 rm -rf ./YandexMobileAdsInstream
+zip -r YandexMobileAdsInstream.xcframework.zip YandexMobileAdsInstream.xcframework
+rm -rf ./YandexMobileAdsInstream.xcframework
 
 YMA_URL="https://github.com/mobile-ads-github/yandex-ads-sdk-swift/releases/download/$version/YandexMobileAds.xcframework.zip"
 YMA_INSTREAM_URL="https://github.com/mobile-ads-github/yandex-ads-sdk-swift/releases/download/$version/YandexMobileAdsInstream.xcframework.zip"
