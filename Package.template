@@ -45,7 +45,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "YandexMobileAdsInstream",
-            path: "YMA_INSTREAM_URL",
+            url: "YMA_INSTREAM_URL",
             checksum: "YMA_INSTREAM_CHECKSUM"
         ),
     ]
