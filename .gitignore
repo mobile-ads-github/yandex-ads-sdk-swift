@@ -1,2 +1,6 @@
 .build
 Package.resolved
+YandexMobileAds.xcframework.zip
+YandexMobileAdsInstream.xcframework.zip
+YandexMobileAds.podspec.json
+YandexMobileAdsInstream.podspec.json
