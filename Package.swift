@@ -10,7 +10,11 @@ let package = Package(
         .library(name: "YandexMobileAdsPackage", targets: ["YandexMobileAdsTarget"])
     ],
     dependencies: [
-        .package(url: "https://github.com/yandexmobile/metrica-sdk-ios", "4.0.0"..<"5.0.0")
+        .package(
+            name: "YandexMobileMetrica",
+            url: "https://github.com/yandexmobile/metrica-sdk-ios",
+            "4.0.0"..<"5.0.0"
+        )
     ],
     targets: [
         .target(
@@ -18,7 +22,7 @@ let package = Package(
             dependencies: [
                 .target(name: "YandexMobileAds"),
                 .target(name: "YandexMobileAdsInstream"),
-                .product(name: "YandexMobileMetrica", package: "metrica-sdk-ios"),
+                .product(name: "YandexMobileMetrica", package: "YandexMobileMetrica"),
             ],
             path: "YandexMobileAdsTarget",
             linkerSettings: [
