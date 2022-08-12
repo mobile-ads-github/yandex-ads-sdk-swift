@@ -24,13 +24,7 @@ let package = Package(
             path: "YandexMobileAdsTarget",
             resources: [
                 .process("Resources"),
-                .process("Resources/YMAFullscreenNativeAdContentV1Design1View.nib"),
-                .process("Resources/YMAInterstitialNativeAdView.nib"),
                 .process("Resources/Assets.car"),
-                .process("Resources/YMAFullscreenNativeAdAppInstallView.nib"),
-                .process("Resources/YMAFullscreenNativeAdContentV1ViewReources.plist"),
-                .process("Resources/YMAInterstitialAppInstallResources.plist"),
-                .process("Resources/YMANativeVideoActionsContainerView.nib"),
             ],
             linkerSettings: [
                 .linkedFramework("UIKit"),
