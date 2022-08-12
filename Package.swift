@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "YandexMobileAdsPackage",
+    defaultLocalization: "en",
     platforms: [.iOS(.v10)],
     products: [
         .library(name: "YandexMobileAdsPackage", targets: ["YandexMobileAdsTarget"])
