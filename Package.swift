@@ -24,7 +24,6 @@ let package = Package(
             path: "YandexMobileAdsTarget",
             resources: [
                 .process("Resources"),
-                .process("Resources/Assets.car"),
             ],
             linkerSettings: [
                 .linkedFramework("UIKit"),
