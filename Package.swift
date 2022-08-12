@@ -22,7 +22,7 @@ let package = Package(
             ],
             path: "YandexMobileAdsTarget",
             resources: [
-                .copy("Resources")
+                .process("Resources")
             ],
             linkerSettings: [
                 .linkedFramework("UIKit"),
